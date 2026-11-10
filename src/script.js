@@ -326,13 +326,10 @@ function listarCandidatos() {
         cancelButtonColor: "#d33",
         confirmButtonText: "Sim, quero excluir"
       }).then((result) => {
-
         if (result.isConfirmed) {
-
           candidatos.splice(indice, 1);
           localStorage.setItem("candidatos", JSON.stringify(candidatos));
           listarCandidatos();
-
           Swal.fire({
             title: "Candidato excluído!!",
             text: "O candidato foi removido com sucesso.",
